@@ -1,3 +1,4 @@
+var port = process.env.PORT || 3000;
 const fs = require('fs');
 const path = require('path');
 const http = require('http');
@@ -62,5 +63,5 @@ http.createServer(function (req, res) {
             return res.end();
         });
     }
-}).listen(8080);
-console.log('Server running at http://localhost:8080/');
+}).listen(port);
+console.log('Server running at http://localhost:' +port + '/');
